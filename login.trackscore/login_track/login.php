@@ -13,9 +13,11 @@
             <img src="fotos/logo_login.png" alt="Logo" id="logo_login">
             <h1 class="welcome">Hello, welcome!</h1>
         </section>
-
-        <form action="logar.php" method="POST" id="container_direito">
-            <img src="fotos/profile_icon.png"  id="logo_profile" alt="">
+        <section id="container_direito">
+            <div id="logo" >
+                <img src="fotos/profile_icon.png" id="logo_profile" alt="">
+            </div>
+            <form action="logar.php" method="POST" id="form_php">
                 <label for="email" class="email_and_password">E-mail</label>
                 <input type="email" name="email" id="InputEmail" class="input_linhas" required>
 
@@ -23,7 +25,8 @@
                 <input type="password" name="senha" id="InputPassword" class="input_linhas" required>
 
                 <input type="submit" id="enviar" value="Sign In">
-        </form>
+            </form>
+        </section>
     </main>
 </body>
 </html>
