@@ -32,8 +32,10 @@
                     <input type="submit" id="enviar" value="Sign In" />
                 </div>
             </form>
-            <div>
-                oi bb
+            <div id="cadastrar">
+                <p>Não tem cadastro?
+                    <a href="../cadastro/cadastro.php">cadastre-se!</a>
+                </p>
             </div>
         </section>
 

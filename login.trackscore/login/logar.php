@@ -12,16 +12,13 @@ if(isset($_POST['email'], $_POST['senha'])) {
         echo "Preencha sua senha";
     } else {
     
-        $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
+        $sql = "SELECT * FROM usuarios WHERE email = :email";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([
-            ':email' => $email,
-            ':senha' => $senha
-        ]);
+        $stmt->execute([':email' => $email]);
 
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if($usuario) {
+        if($usuario && password_verify($senha, $usuario['senha'])) {
             session_start();
             $_SESSION['id'] = $usuario['id'];
             header("Location: painel.php");
