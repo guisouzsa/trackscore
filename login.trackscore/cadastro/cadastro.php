@@ -12,7 +12,7 @@
 
         <section id="container_esquerdo">
             <img src="../login/fotos/logo_login.png" alt="Logo" id="logo_login" />
-            <h1 class="welcome">Create your account</h1>
+            <h1 class="welcome">Bem-vindo! Crie sua conta aqui!</h1>
         </section>
 
         <section id="container_direito">

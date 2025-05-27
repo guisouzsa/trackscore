@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'conexao.php';
 
 if(isset($_POST['email'], $_POST['senha'])) {
@@ -19,7 +20,6 @@ if(isset($_POST['email'], $_POST['senha'])) {
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($usuario && password_verify($senha, $usuario['senha'])) {
-            session_start();
             $_SESSION['id'] = $usuario['id'];
             header("Location: painel.php");
             exit;

@@ -12,7 +12,7 @@
 
         <section id="container_esquerdo">
             <img src="fotos/logo_login.png" alt="Logo" id="logo_login" />
-            <h1 class="welcome">Hello, welcome back!</h1>
+            <h1 class="welcome">Olá, seja bem-vindo</h1>
         </section>
 
 
