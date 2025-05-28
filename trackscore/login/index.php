@@ -32,6 +32,13 @@
                     <input type="submit" id="enviar" value="Sign In" />
                 </div>
             </form>
+            <div class="div_erro">
+            <?php
+                if (isset($_GET['erro']) && $_GET['erro'] == 1) {
+                echo '<p >E-mail ou senha incorretos.</p>';
+            }
+            ?>
+            </div>
             <div id="cadastrar">
                 <p>Não tem cadastro?
                     <a href="../cadastro/cadastro.php">cadastre-se!</a>

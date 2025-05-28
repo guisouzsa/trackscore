@@ -130,3 +130,12 @@ body {
     margin-bottom: 100px;
     
 }
+
+
+.div_erro {
+    color: white;
+    font-weight: bolder;
+    text-align: center ;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}

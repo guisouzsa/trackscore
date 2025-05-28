@@ -24,7 +24,8 @@ if(isset($_POST['email'], $_POST['senha'])) {
             header("Location: painel.php");
             exit;
         } else {
-            echo "E-mail ou senha incorretos.";
+            header("Location: index.php?erro=1");
+            exit;
         }
     }
 }
