@@ -17,10 +17,10 @@ if(isset($_POST['email'], $_POST['senha'])) {
         $stmt = $pdo->prepare($sql);
         $stmt->execute([':email' => $email]);
 
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        $usuario = $stmt->fetch(PDO::FETCH_OBJ);
 
-        if($usuario && password_verify($senha, $usuario['senha'])) {
-            $_SESSION['id'] = $usuario['id'];
+        if($usuario && password_verify($senha, $usuario->senha)) {
+            $_SESSION['id'] = $usuario->id;
             header("Location: painel.php");
             exit;
         } else {
