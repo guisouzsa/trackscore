@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-color: #040404;
+    font-family: "heebo", sans-serif;
+    font-style: normal;
+}
+
+
+
+
+#logo_img {
+    display: inline-block;
+}
+
+#logo_img img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#pesquisa_box[type="text"] {
+  width: 300px;
+  height: 45px;
+  padding: 12px 50px 12px 40px; /* top, right (para lupa), bottom, left (para texto) */
+  font-size: 15px;
+  color: white;
+  border: none;
+  border-radius: 35px;
+  outline: none;
+  box-shadow: none;
+  background-color: rgba(35, 34, 34, 0.5);
+
+  background-image: url('foto/lupa.png');
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px;
+}
+
+
+
+
+
+.divs_principais {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    margin: 60px;
+    height: 525px;
+}
+    
+.div1 {
+    grid-row: span 5 / span 5;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #728FA5, #033463);
+    display: flex;
+    justify-content: center;    
+}
+
+.div2 {
+    grid-column: span 4 / span 4;
+    grid-row: span 5 / span 5;
+    background: linear-gradient(to bottom, #728FA5, #033463);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+        
