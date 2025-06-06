@@ -23,22 +23,35 @@ body {
     height: 100px;
 }
 
-#pesquisa_box[type="text"] {
-  width: 300px;
-  height: 45px;
-  padding: 12px 50px 12px 40px; /* top, right (para lupa), bottom, left (para texto) */
-  font-size: 15px;
-  color: white;
-  border: none;
-  border-radius: 35px;
-  outline: none;
-  box-shadow: none;
-  background-color: rgba(35, 34, 34, 0.5);
 
-  background-image: url('foto/lupa.png');
-  background-repeat: no-repeat;
-  background-position: right 20px center;
-  background-size: 20px;
+
+
+#pesquisa_box[type="text"] {
+    width: 300px;
+    height: 45px;
+    padding: 12px 50px 12px 40px; /* top, right (para lupa), bottom, left (para texto) */
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(35, 34, 34, 0.5);
+
+    background-image: url('foto/lupa.png');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 20px;
+}
+
+
+
+#botao_avaliar {
+    padding: 5px; 
+    border-radius: 35px;
+    font-weight: 800;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -59,7 +72,8 @@ body {
     border-radius: 15px;
     background: linear-gradient(to bottom, #728FA5, #033463);
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    max-width: 680px;  
 }
 
 .div2 {
@@ -71,3 +85,10 @@ body {
     justify-content: center;
 }
         
+
+/* CSS media query dentro de um stylesheet */
+@media (max-width: 680px) {
+  .div1 {
+    background-color:rgb(255, 0, 234);
+}
+}
