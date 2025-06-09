@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     senha VARCHAR(255) NOT NULL
 );
 
+
 CREATE TABLE IF NOT EXISTS avaliacoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
@@ -19,6 +20,7 @@ CREATE TABLE IF NOT EXISTS avaliacoes (
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
 
+
 CREATE TABLE IF NOT EXISTS favoritos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
@@ -27,6 +29,7 @@ CREATE TABLE IF NOT EXISTS favoritos (
     FOREIGN KEY (id_avaliacao) REFERENCES avaliacoes(id),
     CONSTRAINT unico_favorito UNIQUE (id_usuario, id_avaliacao)
 );
+
 
 CREATE TABLE IF NOT EXISTS historico_avaliacoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
