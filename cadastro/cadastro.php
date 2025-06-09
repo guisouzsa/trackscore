@@ -15,6 +15,7 @@
             <h1 class="welcome">Bem-vindo! Crie sua conta aqui!</h1>
         </section>
 
+        
         <section id="container_direito">
             <div id="logo">
                 <img src="../login/fotos/profile_icon.png" id="logo_profile" alt="Ícone de perfil" />
