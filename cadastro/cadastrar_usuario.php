@@ -17,14 +17,14 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit("E-mail inválido.");
 }
 
-    $stmtCheck = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
+    $stmtCheck = $conexao->prepare("SELECT id FROM usuarios WHERE email = ?");
     $stmtCheck->execute([$email]);
 
 if ($stmtCheck->rowCount()) {
     exit("Este e-mail já está cadastrado.");
 }
 
-$stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
+$stmt = $conexao->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
 if ($stmt->execute([$nome, $email, password_hash($senha, PASSWORD_DEFAULT)])) {
     header('Location: ../login/index.php');
     exit;

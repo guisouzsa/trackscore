@@ -29,7 +29,7 @@ include_once '../login/protect.php';
 
                     <div id="foto_capa" class="file-upload">
                         <label for="foto_input" class="custom-file-label">Selecionar imagem</label>
-                        <input type="file" name="foto_capa" id="foto_input" required>
+                        <input type="file" name="foto_capa" id="foto_input" required style="display:none;">
                         <span id="file-name">Nenhum arquivo escolhido</span>
                     </div>
                 </div>
@@ -60,5 +60,6 @@ include_once '../login/protect.php';
         </section>
 
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

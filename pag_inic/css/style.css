@@ -149,27 +149,34 @@ body {
 
 
 input[type="text"] {
-    padding: 10px;
+    padding: 10px 25px 10px 25px;
     font-size: 16px;
     width: 100%;
+    outline: none; 
     box-sizing: border-box;
     border-radius: 20px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-    background-color: #F0F8FF33;    
+    background-color: #F0F8FF33;
+    color: #FFFFFF;  
+    resize: vertical;   
 }
 
 
 #input_comentario {
     height: 150px;
     width: 326px;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 80px; 
+
 }
 
 
 
 .coluna_infor input::placeholder{
     color: #F0F8FF99;
-    padding-left: 10px;
+
 }
 
 
@@ -183,47 +190,46 @@ input[type="text"] {
 
 
 
+
 .file-upload {
-    width: 400px;
-    height: 350px;
-    background-color: #F0F8FF66; 
-    border: 2px dashed #ccc;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
+  width: 500px;
+  height: 450px;
+  background: #F0F8FF66;
+  border: 2px dashed #ccc;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .custom-file-label {
-    background-color: #003262;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-bottom: 15px;
+  background: #003262;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
 }
 
 .custom-file-label:hover {
-    background-color: #00326299;
-}
-
-input[type="file"] {
-    display: none;
+  background: #00326299;
 }
 
 #file-name {
-    font-size: 14px;
-    color: #333;
-    margin-top: 10px;
-    max-width: 100%;
-    word-break: break-word;
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  word-break: break-word;
 }
+
+
+
 
 
 

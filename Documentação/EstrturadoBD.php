@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS avaliacoes (
     album VARCHAR(150) NOT NULL,
     artista VARCHAR(100) NOT NULL,
     comentario TEXT NOT NULL,
+    foto_capa VARCHAR(255),
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
 
