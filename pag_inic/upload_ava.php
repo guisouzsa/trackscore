@@ -11,16 +11,52 @@ include_once '../login/protect.php';
     <title>Upload avaliações</title>
 </head>
 <body>
-    <main>
+    <main id="container_geral">
+
+        <section id="formulario_avaliacao">
+            <h1 class="titulo1">Qual álbum deseja avaliar?</h1>
+
+            <form action="envia_dados.php" method="POST" enctype="multipart/form-data" name="form_upload">
+                <div class="linha">
+                    <div class="coluna_infor">
+                        <label for="nomes" class="nomes">Nome:</label>
+                        <input type="text" name="album" placeholder="Ex: Bloom" required>
+                        <label for="nomes" class="nomes">Artista:</label>
+                        <input type="text" name="artista" placeholder="Ex: Troye Sivan" required>
+                        <label for="nomes" class="nomes">comentário:</label>
+                        <input type="text" name="comentario" id="input_comentario" placeholder="Ex: Muito bom!!!">
+                    </div>
+
+                    <div id="foto_capa" class="file-upload">
+                        <label for="foto_input" class="custom-file-label">Selecionar imagem</label>
+                        <input type="file" name="foto_capa" id="foto_input" required>
+                        <span id="file-name">Nenhum arquivo escolhido</span>
+                    </div>
+                </div>
+                <div id="buttonsalvar">
+                    <input type="submit" value="Enviar" id="Enviar">
+                </div>
+
+            </form>
+        </section>
+
 
         <section>
-            <form action="envia_dados.php" method="POST" name="form_upaload" >
-                <input type="text" name="album" placeholder="Ex: Bloom" required>  
-                <input type="artista" name="artista" placeholder="Ex: Troye sivan" required>  
-                <input type="text" name="comentario" placeholder="Ex: Muito bom!!!" required>  
-                <input type="file" name="nome_album" placeholder="Ex: Bloom" required>  
-                <input type="submit"value="salvar" id="salvar">
-            </form>
+            <div class="mensagens_cadastro">
+            <?php
+            if (isset($_GET['cadastrado']) && $_GET['cadastrado'] == 1) {
+                echo '<p>Álbum cadastrado com sucesso!!!</p>';
+            } elseif (isset($_GET['errocadastro'])) {
+                if ($_GET['errocadastro'] == 2) {
+                    echo '<p>Erro ao cadastrar avaliação.</p>';
+                } elseif ($_GET['errocadastro'] == 3) {
+                    echo '<p>Preencha os dados corretamente.</p>';
+                }
+            } elseif (isset($_GET['acessoinvalido']) && $_GET['acessoinvalido'] == 4) {
+                echo '<p>Acesso inválido</p>';
+            }
+            ?>
+            </div>
         </section>
 
     </main>
