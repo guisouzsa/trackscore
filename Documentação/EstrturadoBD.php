@@ -10,7 +10,6 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 
-
 CREATE TABLE IF NOT EXISTS avaliacoes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
