@@ -5,13 +5,13 @@
 }
 
 body {
-    background-color: #040404;
+    background-color: black;
     font-family: "heebo", sans-serif;
     font-style: normal;
 }
 
 
-
+/* CSS DA TELA INICIAL */
 
 #logo_img {
     display: inline-block;
@@ -29,7 +29,7 @@ body {
 #pesquisa_box[type="text"] {
     width: 300px;
     height: 45px;
-    padding: 12px 50px 12px 40px; /* top, right (para lupa), bottom, left (para texto) */
+    padding: 12px 50px 12px 40px; 
     font-size: 15px;
     color: white;
     border: none;
@@ -86,13 +86,6 @@ body {
 }
         
 
-/* CSS media query dentro de um stylesheet */
-@media (max-width: 680px) {
-  .div1 {
-    background-color:rgb(255, 0, 234);
-}
-}
-
 
 #button_logout {
     color: white;
@@ -102,4 +95,183 @@ body {
     text-decoration: none;
     border-radius: 20px;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* CSS DA PAGINA UPLOAD */
+
+#container_geral {
+    background: linear-gradient(to bottom, #728FA5, #033463);
+    height: 100vh;
+
+}
+
+
+.titulo1 {
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+
+#formulario_avaliacao {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+
+.coluna_infor {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 20px;
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #F0F8FF33;    
+}
+
+
+#input_comentario {
+    height: 150px;
+    width: 326px;
+}
+
+
+
+.coluna_infor input::placeholder{
+    color: #F0F8FF99;
+    padding-left: 10px;
+}
+
+
+.nomes {
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+
+
+
+
+.file-upload {
+    width: 400px;
+    height: 350px;
+    background-color: #F0F8FF66; 
+    border: 2px dashed #ccc;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.custom-file-label {
+    background-color: #003262;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.custom-file-label:hover {
+    background-color: #00326299;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#file-name {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+
+
+
+
+#buttonsalvar {
+    display: flex;
+    justify-content: center;
+  
+}
+
+
+#Enviar {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #003262;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    display: flex;
+}
+
+
+.mensagens_cadastro p {
+    display: flex;
+    justify-content: center;
+    color: #fcfafa;
+    padding: 10px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+
+@media (max-width: 600px) {
+    .linha {
+        flex-direction: column;
+    }
+
+    .coluna_infor,
+    .coluna_imagm {
+        margin-right: 0;
+    }
+
+    #salvar {
+        width: 100%;
+    }
 }
