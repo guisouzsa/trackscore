@@ -1,4 +1,3 @@
-<?php
 CREATE DATABASE IF NOT EXISTS trackscore CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE trackscore;
 
@@ -16,7 +15,6 @@ CREATE TABLE IF NOT EXISTS avaliacoes (
     id_usuario INT NOT NULL,
     album VARCHAR(150) NOT NULL,
     artista VARCHAR(100) NOT NULL,
-    foto_capa LONGBLOB, 
     comentario TEXT NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
