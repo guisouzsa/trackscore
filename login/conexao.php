@@ -1,6 +1,6 @@
 <?php
 try {
-    $pdo = new PDO(
+    $conexao = new PDO(
         "mysql:host=localhost;dbname=trackscore;charset=utf8mb4",
         "root",
         "",
@@ -9,7 +9,7 @@ try {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
         ]
     );
-    $pdo->exec("set names utf8mb4");
+    $conexao->exec("set names utf8mb4");
 } catch (PDOException $erro) {
     echo "Erro na conexão: " . $erro->getMessage();
 }

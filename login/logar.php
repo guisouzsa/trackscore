@@ -14,7 +14,7 @@ if(isset($_POST['email'], $_POST['senha'])) {
     } else {
     
         $sql = "SELECT * FROM usuarios WHERE email = :email";
-        $stmt = $pdo->prepare($sql);
+        $stmt = $conexao->prepare($sql);
         $stmt->execute([':email' => $email]);
 
         $usuario = $stmt->fetch(PDO::FETCH_OBJ);
