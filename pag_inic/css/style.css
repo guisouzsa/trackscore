@@ -13,14 +13,16 @@ body {
 
 /* CSS DA TELA INICIAL */
 
-#logo_img {
-    display: inline-block;
+#nav_principal {
+    display: flex;
 }
 
-#logo_img img {
-    display: block;
+#logo_img {
+    display: flex;
+    justify-content: flex-start;
     width: 100px;
     height: 100px;
+
 }
 
 
@@ -36,23 +38,42 @@ body {
     border-radius: 35px;
     outline: none;
     box-shadow: none;
+    margin-top: 25px;
     background-color: rgba(35, 34, 34, 0.5);
 
-    background-image: url('foto/lupa.png');
+    background-image: url('../foto/lupa.png');
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 20px;
 }
 
 
+#div_avaliar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: darkmagenta;
+}
 
 #botao_avaliar {
-    padding: 5px; 
+    display: inline-block;
+    padding: 5px 18px;
     border-radius: 35px;
-    font-weight: 800;
-    padding-left: 15px;
-    padding-right: 15px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+    
+
+    text-decoration: none;
+    background-color: #fbfcfc;
+    color: rgb(5, 5, 5);           
+    border: none;
+    cursor: pointer;
+    
+
 }
+
 
 
 

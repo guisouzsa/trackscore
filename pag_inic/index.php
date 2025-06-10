@@ -11,39 +11,39 @@ include_once '../login/protect.php';
     <title>Trackscore</title>
 </head>
 <body>
-  <header>
-    <nav id="navbar_principal">
+    <header>
+        <nav id="nav_principal">
 
-        <div id="logo_img">
-            <img src="foto/logo.png" alt="Logo da Trackscore">
-        </div>
+            <div id="logo_img">
+                <img src="foto/logo.png" alt="Logo da Trackscore">
+            </div>
 
-        <form action="#" method="get">
-            <input type="text" placeholder="Pesquise por avaliações" name="pesquisar" id="pesquisa_box">
-        </form>
-    
-        <div>
-            <button id="botao_avaliar">Crie sua avaliação</button>
-            <a href="upload_ava.php"></a>
-        </div>
+            <div>
+                <form action="#" method="get">
+                    <div>
+                        <input type="text" placeholder="Pesquise por avaliações" name="pesquisar" id="pesquisa_box">
+                    </div>
+                </form>
+            </div>
+            
+            <div id="div_avaliar" >
+                <div>
+                    <a href="upload_ava.php" id="botao_avaliar">Crie sua avaliação</a>
+                </div>
+            </div>
 
-    </nav>
+        </nav>
     </header>
 
     <main>
-        <section>
-
         <div class="divs_principais">
             <div class="div1">
-                <p>
-                    <a id="button_logout" href="../login/logout.php">Sair</a>
-                </p>
+                <p><a id="button_logout" href="../login/logout.php">Sair</a></p>
             </div>
             <div class="div2">
-
+                <!-- conteúdo futuro -->
             </div>
         </div>
-        </section>
     </main>
 </body>
 </html>

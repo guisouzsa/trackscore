@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);
             $stmt->bindValue(':album', $album);
             $stmt->bindValue(':artista', $artista);
-            $stmt->bindValue(':foto_capa', $caminho_imagem); // agora é só o caminho
+            $stmt->bindValue(':foto_capa', $caminho_imagem); 
             $stmt->bindValue(':comentario', $comentario);
 
             if ($stmt->execute()) {
@@ -55,4 +55,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     header("Location: upload_ava.php?acessoinvalido=4");
 }
-?> -->
+?> 
