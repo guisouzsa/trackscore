@@ -10,6 +10,23 @@ body {
     font-style: normal;
 }
 
+#div_voltar {
+    width: 35px;
+    height: 35px;
+}
+#botao-voltar {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    background-image: url('../foto/back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
 
 /* CSS DA TELA INICIAL */
 
@@ -126,7 +143,6 @@ body {
 
 #container_geral {
     background: linear-gradient(to bottom, #728FA5, #033463);
-    height: 100vh;
 
 }
 
@@ -141,8 +157,6 @@ body {
 
 
 #formulario_avaliacao {
-
-    width: 100%;
     padding: 20px;
 }
 
@@ -150,20 +164,19 @@ body {
 
 .linha {
     display: flex;
-    justify-content: center;
-    width: 100vh;
-    background-color: rgb(230, 12, 165);
+    justify-content: center;   
+    align-items: flex-start;  
+    gap: 40px;
+    flex-wrap: wrap;   
 }
 
 
+
+
 .coluna_infor {
-    flex: 5;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 100px;
-
-
 }
 
 
@@ -186,7 +199,7 @@ input[type="text"] {
     height: 150px;
     width: 425px;
     height: 100%;
-    padding-bottom: 125px;
+    padding-bottom: 170px;
 }
 
 
@@ -200,6 +213,7 @@ input[type="text"] {
     color: #FFFFFF;
     font-weight: bolder;
     font-size: 15px;
+    margin-left: 25px;
 }
 
 

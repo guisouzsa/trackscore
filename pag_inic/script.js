@@ -13,3 +13,10 @@ inputFile.addEventListener('change', () => {
     fileNameSpan.textContent = "Nenhum arquivo escolhido";
   }
 });
+
+
+
+document.getElementById('botao-voltar').addEventListener('click', function() {
+  history.back();
+});
+
