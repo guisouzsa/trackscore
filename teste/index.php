@@ -28,6 +28,13 @@ include_once '../login/protect.php';
               echo   '<div class="review-right">';
               echo     '<h3>' . htmlspecialchars($rs->album) . '</h3>';
               echo     '<p>' . nl2br(htmlspecialchars($rs->comentario)) . '</p>';
+              
+              // Botões de ação
+              echo   '<div class="buttons">';
+              echo     '<a href="update.php?id=' . htmlspecialchars($rs->id) . '" class="update">Atualizar</a>';
+              echo     '<a href="delete.php?id=' . htmlspecialchars($rs->id) . '" class="delete" onclick="return confirm(\'Tem certeza que deseja excluir?\')">Excluir</a>';
+              echo   '</div>';
+              
               echo   '</div>';
               echo '</div>';
             }

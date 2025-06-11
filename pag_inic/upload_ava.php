@@ -16,29 +16,34 @@ include_once '../login/protect.php';
             <button id="botao-voltar" aria-label="Voltar"></button>
         </div>
         <section id="formulario_avaliacao">
-            <h1 class="titulo1">Qual álbum deseja avaliar?</h1>
+                <div class="titulo1">
+                    <h1 >Qual álbum deseja avaliar?</h1>
+                </div>
+                <div>
                 <div id="div_principal">
                     <form action="envia_dados.php" class="linha" method="POST" enctype="multipart/form-data" name="form_upload">
-                        <div class="coluna_infor">
-                            <label for="nomes" class="nomes">Nome:</label>
-                            <input type="text" name="album" placeholder="Ex: Bloom" required>
-                            <label for="nomes" class="nomes">Artista:</label>
-                            <input type="text" name="artista" placeholder="Ex: Troye Sivan" required>
-                            <label for="nomes" class="nomes">comentário:</label>
-                            <input type="text" name="comentario" id="input_comentario" placeholder="Ex: Muito bom!!!">
-                        </div>
+                        <div class="div_inputs">
+                            <div class="coluna_infor">
+                                <label for="nomes" class="nomes">Nome:</label>
+                                <input type="text" name="album" placeholder="Ex: Bloom" required>
+                                <label for="nomes" class="nomes">Artista:</label>
+                                <input type="text" name="artista" placeholder="Ex: Troye Sivan" required>
+                                <label for="nomes" class="nomes">comentário:</label>
+                                <input type="text" name="comentario" id="input_comentario" placeholder="Ex: Muito bom!!!">
+                            </div>
 
-                        <div id="foto_capa" class="file-upload">
-                            <label class="custom-file-label">Selecionar imagem</label>
-                            <input type="file" name="foto_capa" id="foto_input" required style="display:none;">
-                            <span id="file-name">Nenhum arquivo escolhido</span>
+                            <div id="foto_capa" class="file-upload">
+                                <label class="custom-file-label">Selecionar imagem</label>
+                                <input type="file" name="foto_capa" id="foto_input" required style="display:none;">
+                                <span id="file-name">Nenhum arquivo escolhido</span>
+                            </div>
+                        </div>
+                        
+                        <div id="buttonsalvar">
+                            <input type="submit" value="Enviar" id="Enviar">
                         </div>
                     </form>
-                </div>
-
-                <div id="buttonsalvar">
-                    <input type="submit" value="Enviar" id="Enviar">
-                </div>
+            '   </div>
         </section>
 
 

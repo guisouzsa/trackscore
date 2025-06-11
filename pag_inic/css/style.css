@@ -10,24 +10,6 @@ body {
     font-style: normal;
 }
 
-#div_voltar {
-    width: 35px;
-    height: 35px;
-}
-#botao-voltar {
-    width: 35px;
-    height: 35px;
-    margin: 10px;
-    background-image: url('../foto/back.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-
 /* CSS DA TELA INICIAL */
 
 #nav_principal {
@@ -61,6 +43,7 @@ body {
     background-position: right 20px center;
     background-size: 20px;
 }
+
 
 
 
@@ -139,13 +122,37 @@ body {
 
 
 
+
+
 /* CSS DA PAGINA UPLOAD */
+
+
+#div_voltar {
+    width: 35px;
+    height: 35px;
+}
+#botao-voltar {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    background-image: url('../foto/back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
 
 #container_geral {
     background: linear-gradient(to bottom, #728FA5, #033463);
-
+    height: 100vh;
 }
 
+#formulario_avaliacao {
+    margin-top: 100px;
+}
 
 .titulo1 {
     display: flex;
@@ -156,22 +163,20 @@ body {
 }
 
 
-#formulario_avaliacao {
-    padding: 20px;
-}
-
-
-
 .linha {
     display: flex;
+    flex-direction: column;
     justify-content: center;   
-    align-items: flex-start;  
     gap: 40px;
     flex-wrap: wrap;   
 }
 
+.div_inputs {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 
-
+}
 
 .coluna_infor {
     display: flex;
@@ -215,8 +220,6 @@ input[type="text"] {
     font-size: 15px;
     margin-left: 25px;
 }
-
-
 
 
 
@@ -267,10 +270,7 @@ input[type="text"] {
 
 #buttonsalvar {
     display: flex;
-    justify-content: center;
-    margin-top: 70px;
-    
-  
+    justify-content: center;  
 }
 
 
