@@ -4,44 +4,49 @@ require_once '../login/conexao.php';
 include_once '../login/protect.php'; 
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Avaliações</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Lista de Avaliações</h1>
-    <table border="1" width="100%">
-        <tr>
-            <th>Álbum</th>
-            <th>Artista</th>
-            <th>Capa</th>
-            <th>Comentário</th>
-            <th>Ações</th>
-        </tr>
+  <div class="reviews-container">
+    <h1>Reviews</h1>
+    <div class="reviews-wrapper">
+      <div class="reviews-grid">
         <?php
         try {
-            $stmt = $conexao->prepare("SELECT * FROM avaliacoes");
-            if ($stmt->execute()) {
-                while ($rs = $stmt->fetch(PDO::FETCH_OBJ)) {
-                    echo "<tr>";
-                    echo "<td>" . $rs->album . "</td>";
-                    echo "<td>" . $rs->artista . "</td>";
-                    echo "<td><img src='" . $rs->foto_capa . "' alt='Capa do álbum' width='100'></td>";
-                    echo "<td>" . nl2br($rs->comentario) . "</td>";
-                    echo "<td>
-                        <a href=\"?act=upd&id=" . $rs->id . "\">[Alterar]</a> | 
-                        <a href=\"?act=del&id=" . $rs->id . "\">[Excluir]</a>
-                    </td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='5'>Erro: Não foi possível recuperar os dados do banco de dados</td></tr>";
+          $stmt = $conexao->prepare("SELECT * FROM avaliacoes ORDER BY id DESC");
+          if ($stmt->execute()) {
+            while ($rs = $stmt->fetch(PDO::FETCH_OBJ)) {
+              echo '<div class="review">';
+              echo   '<div class="review-left">';
+              echo     '<img src="../pag_inic/' . htmlspecialchars($rs->foto_capa) . '" alt="Capa do álbum">';
+              echo   '</div>';
+              echo   '<div class="review-right">';
+              echo     '<h3>' . htmlspecialchars($rs->album) . '</h3>';
+              echo     '<p>' . nl2br(htmlspecialchars($rs->comentario)) . '</p>';
+              
+              // Botões de ação
+              echo   '<div class="buttons">';
+              echo     '<a href="update.php?id=' . htmlspecialchars($rs->id) . '" class="update">Atualizar</a>';
+              echo     '<a href="delete.php?id=' . htmlspecialchars($rs->id) . '" class="delete" onclick="return confirm(\'Tem certeza que deseja excluir?\')">Excluir</a>';
+              echo   '</div>';
+              
+              echo   '</div>';
+              echo '</div>';
             }
+          } else {
+            echo '<p>Erro ao buscar avaliações no banco de dados.</p>';
+          }
         } catch (PDOException $erro) {
-            echo "<tr><td colspan='5'>Erro: " . $erro->getMessage() . "</td></tr>";
+          echo '<p>Erro: ' . $erro->getMessage() . '</p>';
         }
         ?>
-    </table>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

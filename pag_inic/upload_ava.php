@@ -66,6 +66,6 @@ include_once '../login/protect.php';
         </section>
 
     </main>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
