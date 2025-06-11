@@ -48,5 +48,12 @@ include_once '../login/protect.php';
       </div>
     </div>
   </div>
+  <!-- <div div="erro_delete_dados">
+      <?php
+        if (isset($_GET['erro']) && $_GET['erro'] == 1) {
+            echo '<p >E-mail ou senha incorretos.</p>';
+        }
+      ?>
+  </div> -->
 </body>
 </html>

@@ -10,7 +10,8 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $stmt->bindParam(':id_album', $id_album, PDO::PARAM_INT);
     $stmt->execute();
 
-    echo 'Registro excluído com sucesso!'; 
+    header("Location: read_dados.php?erro=1");
+    exit; 
 } else {
     echo 'ID inválido!'; 
 }
