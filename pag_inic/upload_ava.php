@@ -29,7 +29,7 @@ include_once '../login/protect.php';
                                 <label for="nomes" class="nomes">Artista:</label>
                                 <input type="text" name="artista" placeholder="Ex: Troye Sivan" required>
                                 <label for="nomes" class="nomes">comentário:</label>
-                                <input type="text" name="comentario" id="input_comentario" placeholder="Ex: Muito bom!!!">
+                                <textarea type="text" name="comentario" id="input_comentario" placeholder="Ex: Muito bom!!!"></textarea>
                             </div>
 
                             <div id="foto_capa" class="file-upload">
