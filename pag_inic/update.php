@@ -3,18 +3,17 @@ session_start();
 require_once '../login/conexao.php';
 include_once '../login/protect.php';
 
-// Variáveis padrão
 $id = $album = $artista = $comentario = $foto_capa = "";
 
-// PROCESSAMENTO DO POST (salvar atualização)
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST["id"];
     $album = $_POST["album"];
     $artista = $_POST["artista"];
     $comentario = $_POST["comentario"];
-    $foto_capa = $_POST["foto_capa_atual"]; // valor padrão (caso não envie novo)
+    $foto_capa = $_POST["foto_capa_atual"]; 
 
-    // Se o usuário enviou uma nova imagem
+
     if (isset($_FILES['foto_capa']) && $_FILES['foto_capa']['error'] === UPLOAD_ERR_OK) {
         $novo_nome = uniqid() . "_" . $_FILES['foto_capa']['name'];
         $destino = "../pag_inic/" . $novo_nome;
@@ -124,7 +123,7 @@ if (isset($_GET["id"]) && is_numeric($_GET["id"])) {
                     </div>
 
                     <div id="buttonsalvar">
-                        <input type="submit" value="Salvar Alterações" id="Enviar">
+                        <input type="submit" value="Salvar Alterações" id="update_enviar">
                     </div>
                 </form>
             </div>

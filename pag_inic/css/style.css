@@ -204,6 +204,7 @@ input[type="text"] {
     min-height: 150px;
     padding: 15px 25px;
     font-size: 16px;
+    color: #FFFFFF;
     border-radius: 20px;
     border: 1px solid #ccc;
     background-color: #F0F8FF33;
@@ -213,13 +214,14 @@ input[type="text"] {
     overflow-wrap: break-word;
     white-space: pre-wrap; /* mantém as quebras de linha do texto */
     outline: none;
+    font-family: "heebo", sans-serif;
 }
 
 
 .coluna_infor input::placeholder,
 .coluna_infor textarea::placeholder {
     color: #F0F8FF99;
-    font-family: "heebo", sans-serif;
+
 }
 
 
@@ -375,6 +377,8 @@ input[type="text"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100px;
 }
 
 .reviews-wrapper {
@@ -488,3 +492,28 @@ button {
     margin-top: 20px;
 }
 
+
+
+
+
+
+
+
+
+
+
+/* CSS DO UPDATE */
+
+#update_enviar {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #003262;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    display: flex;
+}

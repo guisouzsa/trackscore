@@ -1,7 +1,7 @@
 <?php
 try {
     $conexao = new PDO(
-        "mysql:host=localhost;dbname=trackscore;charset=utf8mb4",
+        "mysql:host=localhost;port=3307;dbname=trackscore;charset=utf8mb4",
         "root",
         "",
         [
