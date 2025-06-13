@@ -13,6 +13,6 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     header("Location: read_dados.php?erro=1");
     exit; 
 } else {
-    echo 'ID inválido!'; 
+    header("Location: read_dados.php?erro=2");
 }
 ?>

@@ -345,6 +345,11 @@ input[type="text"] {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #728FA5, #033463);
     text-align: center;
+}
+
+.container_geral {
+    background: linear-gradient(to bottom, #728FA5, #033463);
+    text-align: center;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -354,6 +359,18 @@ input[type="text"] {
     justify-content: center;
     align-items: center;
 }
+
+.review-right p {
+    margin: 0;
+    color: #F0F8FF;
+    font-weight: bolder;
+    font-size: 15px;
+    max-width: 250px;
+    overflow-wrap: anywhere; /* <- Quebra até palavras muito longas */
+    word-break: break-word;   /* <- Quebra palavras se necessário */
+    white-space: normal;
+}
+
 
 .reviews-container {
     width: 800px;
