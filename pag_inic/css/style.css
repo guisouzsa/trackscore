@@ -345,17 +345,15 @@ input[type="text"] {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #728FA5, #033463);
     text-align: center;
+    height: 100vh;
 }
 
 .container_geral {
-    background: linear-gradient(to bottom, #728FA5, #033463);
     text-align: center;
     color: #fff;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+
     justify-content: center;
     align-items: center;
 }
@@ -374,7 +372,8 @@ input[type="text"] {
 
 .reviews-container {
     width: 100vh;
-    height: 800px;
+    height: 700px;
+    margin-top: 50px;
     background: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);

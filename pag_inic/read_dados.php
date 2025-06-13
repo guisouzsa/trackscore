@@ -54,6 +54,9 @@ include_once '../login/protect.php';
         </div>
       </div>
     </div>
+    <div id="">
+      <a href="upload_ava.php" id="botao-voltar" aria-label="Voltar">Voltar</a>    
+    </div>
     <div class="delete-success">
         <?php
           if (isset($_GET['erro']) && $_GET['erro'] == 1) {

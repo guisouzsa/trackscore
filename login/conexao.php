@@ -1,9 +1,9 @@
 <?php
 try {
     $conexao = new PDO(
-        "mysql:host=localhost;dbname=trackscore;charset=utf8mb4",
+        "mysql:host=localhost;port=3307;dbname=trackscore;charset=utf8mb4",
         "root",
-        "aluno",
+        "",
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
