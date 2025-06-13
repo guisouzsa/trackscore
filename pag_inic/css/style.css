@@ -366,15 +366,15 @@ input[type="text"] {
     font-weight: bolder;
     font-size: 15px;
     max-width: 250px;
-    overflow-wrap: anywhere; /* <- Quebra até palavras muito longas */
-    word-break: break-word;   /* <- Quebra palavras se necessário */
+    overflow-wrap: anywhere;
+    word-break: break-word;
     white-space: normal;
 }
 
 
 .reviews-container {
-    width: 800px;
-    height: 500px;
+    width: 100vh;
+    height: 800px;
     background: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -395,7 +395,7 @@ input[type="text"] {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
+    height: 80px;
 }
 
 .reviews-wrapper {
@@ -403,8 +403,7 @@ input[type="text"] {
     width: 100%;
     scrollbar-width: thin;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
+
 }
 
 .coluna_reviews {
@@ -422,7 +421,7 @@ input[type="text"] {
     flex-direction: row;
     align-items: flex-start;
     gap: 15px;
-    width: 370px;
+    width: 100%;
 }
 
 
