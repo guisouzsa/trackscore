@@ -141,10 +141,12 @@ body {
 /* CSS DO ERRO "SENHA OU EMAIL INCORRETOS" */
 .div_erro {
     color: white;
-    font-weight: bolder;
-    text-align: center ;
+    font-weight: 900;
+    font-size: 25px;
+    text-align: center;
     padding-left: 100px;
     padding-bottom: 50px;
+    color: rgb(255, 0, 0);
 }
 
 
@@ -211,3 +213,8 @@ body {
 .erro_naologado a:hover {
     background-color: #e6e6e6;
 }
+
+
+
+
+

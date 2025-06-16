@@ -36,7 +36,25 @@
                 </div>
             </form>
         </section>
-
+        <div class="div_erro">
+            <?php
+            if (isset($_GET['acessinvalid']) && $_GET['acessinvalid'] == 1) {
+                echo '<p style="color:red;">Acesso inválido</p>';
+            }
+            if (isset($_GET['erro_campos']) && $_GET['erro_campos'] == 2) {
+                echo '<p style="color:red;">Preencha todos os campos</p>';
+            }
+            if (isset($_GET['email']) && $_GET['email'] == 3) {
+                echo '<p style="color:red;">E-mail inválido.</p>';
+            }
+            if (isset($_GET['emailcadastrado']) && $_GET['emailcadastrado'] == 4) {
+                echo '<p style="color:red;">Este e-mail já está cadastrado</p>';
+            }
+            else if (isset($_GET['erro_banco']) && $_GET['erro_banco'] == 5) {
+                echo '<p style="color:red;">Erro ao cadastrar usuário</p>';
+            }
+            ?>
+        </div>
     </main>
 </body>
 </html>

@@ -34,8 +34,14 @@
             </form>
             <div class="div_erro">
             <?php
-                if (isset($_GET['erro']) && $_GET['erro'] == 1) {
-                echo '<p >E-mail ou senha incorretos.</p>';
+                if (isset($_GET['email']) && $_GET['email'] == 1) {
+                    echo '<p >Preencha seu E-mail.</p>';
+            }
+                if (isset($_GET['senha']) && $_GET['senha'] == 2) {
+                    echo '<p >Preencha sua senha.</p>';
+                }
+                else if (isset($_GET['erro']) && $_GET['erro'] == 3) {
+                    echo '<p >E-mail ou senha incorretos.</p>';
             }
             ?>
             </div>

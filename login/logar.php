@@ -8,9 +8,11 @@ if(isset($_POST['email'], $_POST['senha'])) {
     $senha = trim($_POST['senha']);
 
     if(empty($email)) {
-        echo "Preencha seu email";
+        header("Location: index.php?email=1");
+            exit;
     } else if(empty($senha)) {
-        echo "Preencha sua senha";
+        header("Location: index.php?senha=2");
+            exit;
     } else {
     
         $sql = "SELECT * FROM usuarios WHERE email = :email";
@@ -24,7 +26,7 @@ if(isset($_POST['email'], $_POST['senha'])) {
             header("Location: ../pag_inic/index.php");
             exit;
         } else {
-            header("Location: index.php?erro=1");
+            header("Location: index.php?erro=3");
             exit;
         }
     }
