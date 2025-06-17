@@ -19,6 +19,9 @@ include_once '../login/protect.php';
                 <div class="titulo1">
                     <h1 >Qual álbum deseja avaliar?</h1>
                 </div>
+                <div id="botao_read_centralizado">
+                    <a href="read_dados.php" class="botao_read">Veja sua lista</a>
+                </div>
                 <div>
                 <div id="div_principal">
                     <form action="envia_dados.php" class="linha" method="POST" enctype="multipart/form-data" name="form_upload">
