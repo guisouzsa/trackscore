@@ -23,7 +23,7 @@ if(isset($_POST['email'], $_POST['senha'])) {
 
         if($usuario && password_verify($senha, $usuario->senha)) {
             $_SESSION['id'] = $usuario->id;
-            header("Location: ../pag_inic/index.php");
+            header("Location: ../paginas/index.php");
             exit;
         } else {
             header("Location: index.php?erro=3");
