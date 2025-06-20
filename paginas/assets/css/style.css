@@ -17,13 +17,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 #logo_img {
     display: flex;
     justify-content: flex-start;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
 }
 
 #pesquisa_box[type="text"] {
@@ -35,7 +37,7 @@ body {
     border: none;
     border-radius: 35px;
     outline: none;
-    margin-top: 25px;
+    margin-top: 15px;
     background-color: rgba(35, 34, 34, 0.5);
     background-image: url('../foto/lupa.png');
     background-repeat: no-repeat;
@@ -46,8 +48,8 @@ body {
 #div_avaliar {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    margin-top: 35px;
+    width: 40%;
+    margin-top: 5px;
     margin-right: 20px;
 }
 
@@ -66,7 +68,7 @@ body {
 .divs_principais {
     display: flex;
     height: 100vh;
-    margin: 20px;
+    margin: 0px 20px;
     gap: 20px;
 }
 
@@ -80,6 +82,14 @@ body {
     gap: 15px;
 }
 
+.grupo-cima,
+.grupo-baixo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
 .div2 {
     flex: 1;
     background: linear-gradient(to bottom, #728FA5, #033463);
@@ -90,23 +100,71 @@ body {
     align-items: center;
 }
 
+
 #button_logout, .botao_menu {
     color: white;
     text-align: center;
     padding: 13px 20px;
-    background: #003262;
+    background-color: rgba(255, 255, 255, 0.); /* fundo branco bem transparente */
+
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    border: 0.1px solid #ffffff30;
+}
+
+
+#button_logout:hover, .botao_menu:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* fundo branco bem transparente */
+}
+
+ .botao_menu, #button_logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 13px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
-    font-weight: bold;
+    border: 0.1px solid #ffffff30;
     transition: background 0.3s;
 }
 
-#button_logout:hover, .botao_menu:hover {
-    background: #011e3c;
+
+
+.icone_botao {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
 }
 
+
+
+
+
+.separador {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    margin: 20px 0;
+}
+
+.separador::before,
+.separador::after {
+    width: 30px; 
+    content: "";
+    border-top: 1px solid #ffffff;
+    margin: 0 10px;
+}
+
+.separador span {
+    font-size: 17px;
+}
 
 
 

@@ -15,8 +15,13 @@ inputFile.addEventListener('change', () => {
 });
 
 
-
-document.getElementById('botao-voltar').addEventListener('click', function() {
-  history.back();
+document.addEventListener('DOMContentLoaded', () => {
+  const voltar = document.getElementById('botao-voltar');
+  if (!voltar) {
+    console.warn('Botão voltar não encontrado!');
+    return;
+  }
+  voltar.addEventListener('click', () => {
+    history.back();
+  });
 });
-
