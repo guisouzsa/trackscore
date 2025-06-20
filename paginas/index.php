@@ -13,7 +13,6 @@ include_once '../login/protect.php';
 <body>
     <header>
         <nav id="nav_principal">
-
             <div id="logo_img">
                 <img src="assets/foto/logo.png" alt="Logo da Trackscore">
             </div>
@@ -26,21 +25,27 @@ include_once '../login/protect.php';
                 </form>
             </div>
             
-            <div id="div_avaliar" >
+            <div id="div_avaliar">
                 <div>
                     <a href="upload_ava.php" id="botao_avaliar">Crie sua avaliação</a>
                 </div>
             </div>
-
         </nav>
     </header>
 
     <main>
         <div class="divs_principais">
             <div class="div1">
-                <p><a id="button_logout" href="../login/logout.php">Sair</a></p>
+                <a id="button_logout" href="../login/logout.php">Sair</a>
+                <a class="botao_menu" href="#">Página Inicial</a>
+                <a class="botao_menu" href="#">Minhas Avaliações</a>
+                <a class="botao_menu" href="#">Configurações</a>
+                <a class="botao_menu" href="#">Página Inicial</a>
+                <a class="botao_menu" href="#">Minhas Avaliações</a>
+                <a class="botao_menu" href="#">Configurações</a>
             </div>
             <div class="div2">
+                <!-- futuro conteúdo -->
             </div>
         </div>
     </main>

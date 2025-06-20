@@ -1,7 +1,7 @@
-* {
+* { 
     box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -11,12 +11,12 @@ body {
 }
 
 
-
-
-/* CSS DA TELA INICIAL DEPOIS DE LOGIN*/
+/* CSS DA TELA INICIAL DEPOIS DE LOGIN */
 
 #nav_principal {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #logo_img {
@@ -24,7 +24,6 @@ body {
     justify-content: flex-start;
     width: 100px;
     height: 100px;
-
 }
 
 #pesquisa_box[type="text"] {
@@ -36,16 +35,13 @@ body {
     border: none;
     border-radius: 35px;
     outline: none;
-    box-shadow: none;
     margin-top: 25px;
     background-color: rgba(35, 34, 34, 0.5);
-
     background-image: url('../foto/lupa.png');
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 20px;
 }
-
 
 #div_avaliar {
     display: flex;
@@ -60,56 +56,56 @@ body {
     border-radius: 35px;
     font-weight: bolder;
     margin-top: 200px;
-
     text-decoration: none;
     background-color: #fbfcfc;
     color: rgb(5, 5, 5);           
     border: none;
     cursor: pointer;
-    
-
 }
-
 
 .divs_principais {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 20px;
+    display: flex;
+    height: 100vh;
     margin: 20px;
-    height: 100%;
+    gap: 20px;
 }
-    
+
 .div1 {
-    grid-row: span 5 / span 5;
+    width: 220px;
     border-radius: 15px;
     background: linear-gradient(to bottom, #728FA5, #033463);
-    
-    height: 800px;
-    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .div2 {
-    grid-column: span 4 / span 4;
-    grid-row: span 5 / span 5;
+    flex: 1;
     background: linear-gradient(to bottom, #728FA5, #033463);
     border-radius: 15px;
+    padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-
-#button_logout {
+#button_logout, .botao_menu {
     color: white;
     text-align: center;
-    padding: 13px 40px;
+    padding: 13px 20px;
     background: #003262;
     text-decoration: none;
     border-radius: 20px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-
+#button_logout:hover, .botao_menu:hover {
+    background: #011e3c;
+}
 
 
 
