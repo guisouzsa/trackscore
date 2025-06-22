@@ -623,3 +623,84 @@ button {
     background-color: #e6e6e6;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS DO PERFIL DO USUÁRIO */
+.container_perfil {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4a7ca5, #0d2c4b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartao {
+    background-color: #0d2c4b;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.icone {
+    font-size: 35px;
+}
+
+.info h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.info p {
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+.botoes {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.botao {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deletar {
+    background-color: #d9534f;
+}
+
+.atualizar {
+    background-color: #0275d8;
+}
+
+.deletar:hover {
+    background-color: #c9302c;
+}
+
+.atualizar:hover {
+    background-color: #025aa5;
+}

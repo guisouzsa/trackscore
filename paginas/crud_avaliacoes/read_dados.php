@@ -29,7 +29,7 @@ include_once '../../login/protect.php';
                             while ($rs = $stmt->fetch(PDO::FETCH_OBJ)) {
                                 echo '<div class="review">';
                                 echo   '<div class="review-left">';
-                                echo     '<img src="../../paginas/' . htmlspecialchars($rs->foto_capa) . '" alt="Capa do álbum" />';
+                                echo     '<img src="' . htmlspecialchars($rs->foto_capa) . '" alt="Capa do álbum" />';
                                 echo   '</div>';
                                 echo   '<div class="review-right">';
                                 echo     '<h3>' . htmlspecialchars($rs->album) . '</h3>';

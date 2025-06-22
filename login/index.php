@@ -47,7 +47,7 @@
             </div>
             <div id="cadastrar">
                 <p>Não tem cadastro?
-                    <a href="../cadastro/cadastro.php">cadastre-se!</a>
+                    <a href="../paginas/cadastro/cadastro.php">cadastre-se!</a>
                 </p>
             </div>
         </section>
