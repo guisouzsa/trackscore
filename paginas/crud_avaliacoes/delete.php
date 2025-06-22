@@ -1,5 +1,5 @@
 <?php
-require_once '../../login/conexao.php'; 
+    require_once '../../login/conexao.php'; 
 
 
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {

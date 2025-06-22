@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once '../../login/conexao.php'; 
+    session_start();
+    require_once '../../login/conexao.php'; 
 
 if (!isset($_SESSION['id'])) {
     exit("Você precisa estar logado para fazer uma avaliação.");
