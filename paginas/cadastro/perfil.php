@@ -1,3 +1,6 @@
+<?php
+    include_once '../../login/protect.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

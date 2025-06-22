@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../login/conexao.php';
-include_once '../../login/protect.php';
+include_once '../assets/protect/protect.php'; 
 
 $id = $album = $artista = $comentario = $foto_capa = "";
 
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' && isset($_GET["id"]) && is_numeric($_
 <body>
 <main id="container_geral">
     <div id="div_voltar">
-        <a href="index.php"><button id="botao-voltar" aria-label="Voltar"></button></a>
+        <a href="read_dados.php"><button id="botao-voltar" aria-label="Voltar"></button></a>
     </div>
 
     <section id="formulario_avaliacao">

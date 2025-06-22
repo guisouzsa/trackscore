@@ -13,7 +13,7 @@ include_once '../../login/protect.php';
 <body>
     <main id="container_geral">
         <div id="div_voltar">
-            <button id="botao-voltar" aria-label="Voltar"></button>
+            <a href="../index.php"><button id="botao-voltar" aria-label="Voltar"></button></a>
         </div>
         <section id="formulario_avaliacao">
                 <div class="titulo1">

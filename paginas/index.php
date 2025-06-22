@@ -1,5 +1,5 @@
 <?php 
-include_once '../login/protect.php'; 
+include_once 'assets/protect/protect.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,9 +36,8 @@ include_once '../login/protect.php';
     <main>
         <div class="divs_principais">
             <div class="div1">
-                <!-- Grupo de cima -->
                 <div class="grupo-cima">
-                    <a class="botao_menu" href="#">
+                    <a class="botao_menu" href="cadastro/perfil.php">
                         <img src="assets/foto/perfil.png" class="icone_botao" alt="Perfil">
                         Perfil
                     </a>

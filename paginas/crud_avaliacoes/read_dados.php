@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../../login/conexao.php'; 
-include_once '../../login/protect.php'; 
+include_once '../assets/protect/protect.php'; 
 ?>
 <!DOCTYPE html
 <html lang="pt">
@@ -13,7 +13,7 @@ include_once '../../login/protect.php';
 </head>
 <body class="body_estilo">
     <div id="div_voltar">
-        <button id="botao-voltar" aria-label="Voltar"></button>
+       <a href="upload_ava.php"><button id="botao-voltar" aria-label="Voltar"></button></a>
     </div>
     <div class="container_geral">
         <div class="reviews-container">

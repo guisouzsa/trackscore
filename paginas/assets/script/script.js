@@ -13,15 +13,3 @@ inputFile.addEventListener('change', () => {
     fileNameSpan.textContent = "Nenhum arquivo escolhido";
   }
 });
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const voltar = document.getElementById('botao-voltar');
-  if (!voltar) {
-    console.warn('Botão voltar não encontrado!');
-    return;
-  }
-  voltar.addEventListener('click', () => {
-    history.back();
-  });
-});
