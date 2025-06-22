@@ -10,13 +10,13 @@ if (!isset($_SESSION['id'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Não Autorizado</title>
-        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
         <link rel="stylesheet" href="https://use.typekit.net/ysp4tri.css" />
     </head>
     <body>
         <div class="erro_naologado">
             <h2>Você não pode acessar essa página porque não está logado</h2>
-            <p><a href="../login/index.php">Tela de login</a></p>
+            <p><a href="../../../trackscore/login/index.php">Tela de login</a></p>
         </div>
     </body>
     </html>

@@ -5,13 +5,16 @@
 }
 
 body {
-    background-color: black;
+    /* background-color: black; */
     font-family: "heebo", sans-serif;
     font-style: normal;
 }
 
 
 /* CSS DA TELA INICIAL DEPOIS DE LOGIN */
+#tela_inicial {
+    background-color: black;
+}
 
 #nav_principal {
     display: flex;
@@ -627,12 +630,36 @@ button {
 
 
 
+/* CSS DO ERRO "VOCÊ NÂO PODE ACESSAR ESSA PAGINA" */
 
+.erro_naologado {
+    width: 100vw;
+    height: 100vh;
+    background-color: #003262;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
+.erro_naologado a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #003262;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-
-
-
+.erro_naologado a:hover {
+    background-color: #e6e6e6;
+}
 
 
 
@@ -640,10 +667,15 @@ button {
 
 
 /* CSS DO PERFIL DO USUÁRIO */
+
+.container_dados_user {
+    background: linear-gradient(to bottom, #4a7ca5, #0d2c4b);
+
+
+}
 .container_perfil {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #4a7ca5, #0d2c4b);
     display: flex;
     flex-direction: column;
     justify-content: center;

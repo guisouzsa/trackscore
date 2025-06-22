@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once 'conexao.php';
+    session_start();
+    require_once 'conexao.php';
 
 if(isset($_POST['email'], $_POST['senha'])) {
     
@@ -23,6 +23,8 @@ if(isset($_POST['email'], $_POST['senha'])) {
 
         if($usuario && password_verify($senha, $usuario->senha)) {
             $_SESSION['id'] = $usuario->id;
+            $_SESSION['email'] = $usuario->email;
+            $_SESSION['nome'] = $usuario->nome;
             header("Location: ../paginas/index.php");
             exit;
         } else {
