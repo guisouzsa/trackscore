@@ -3,8 +3,6 @@ session_start();
 include_once '../assets/protect/protect.php';
 include_once '../../login/conexao.php';
 
-
-
 $id = $_SESSION['id'];
 
 try {
@@ -51,7 +49,7 @@ try {
     <div class="delete-success">
         <?php
         if (isset($_GET['erro']) && $_GET['erro'] == 1) {
-            echo '<p>Avaliação deletada com sucesso!!!</p>';
+            echo '<p>User deletado com sucesso deletada com sucesso!!!</p>';
         }
         ?>
     </div>
