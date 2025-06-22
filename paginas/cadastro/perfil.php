@@ -34,20 +34,34 @@ try {
 </head>
 <body class="container_dados_user">
 
-<div class="container_perfil">
-    <div class="cartao">
-        <div class="icone">👤</div>
-        <div class="info">
-            <h2><?php echo htmlspecialchars($user->nome); ?></h2>
-            <p><?php echo htmlspecialchars($user->email); ?></p>
+    <div class="container_perfil">
+        <div class="cartao">
+            <div class="icone">👤</div>
+            <div class="info">
+                <h2><?php echo htmlspecialchars($user->nome); ?></h2>
+                <p><?php echo htmlspecialchars($user->email); ?></p>
+            </div>
+        </div>
+
+        <div class="botoes">
+            <a href="update.php?id=<?php echo $user->id; ?>" class="botao atualizar">Atualizar</a>
+            <a href="delete.php?id=<?php echo $user->id; ?>" class="botao deletar">Deletar</a>
         </div>
     </div>
-
-    <div class="botoes">
-        <a href="update.php?id=<?php echo $user->id; ?>" class="botao atualizar">Atualizar</a>
-        <a href="delete.php?id=<?php echo $user->id; ?>" class="botao deletar">Deletar</a>
+    <div class="delete-success">
+        <?php
+        if (isset($_GET['erro']) && $_GET['erro'] == 1) {
+            echo '<p>Avaliação deletada com sucesso!!!</p>';
+        }
+        ?>
     </div>
-</div>
 
+    <div class="delete-success">
+        <?php
+        if (isset($_GET['erro']) && $_GET['erro'] == 2) {
+            echo '<p>ID da avalição invalido</p>';
+        }
+        ?>
+    </div>
 </body>
 </html>

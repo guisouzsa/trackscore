@@ -12,7 +12,7 @@ body {
 
 
 /* CSS DA TELA INICIAL DEPOIS DE LOGIN */
-#tela_inicial {
+.tela_inicial {
     background-color: black;
 }
 
@@ -684,6 +684,8 @@ button {
 
 .cartao {
     background-color: #0d2c4b;
+    width: 100vh;
+    height: 80px;
     padding: 15px 20px;
     border-radius: 10px;
     display: flex;
@@ -693,7 +695,7 @@ button {
 }
 
 .icone {
-    font-size: 35px;
+    font-size: 50px;
 }
 
 .info h2 {
@@ -717,16 +719,14 @@ button {
     border: none;
     border-radius: 6px;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .deletar {
-    background-color: #d9534f;
+    background-color: red;
 }
 
 .atualizar {
-    background-color: #0275d8;
+    background-color: #0d2c4b;
 }
 
 .deletar:hover {

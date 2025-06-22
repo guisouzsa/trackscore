@@ -10,7 +10,7 @@ include_once 'assets/protect/protect.php';
     <link rel="stylesheet" href="https://use.typekit.net/ysp4tri.css" />
     <title>Trackscore</title>
 </head>
-<body>
+<body class="tela_inicial">
     <header>
         <nav id="nav_principal">
             <div id="logo_img">

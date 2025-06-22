@@ -1,7 +1,7 @@
 <?php
-session_start();
-require_once '../../login/conexao.php'; 
-include_once '../assets/protect/protect.php'; 
+    session_start();
+    require_once '../../login/conexao.php'; 
+    include_once '../assets/protect/protect.php'; 
 ?>
 <!DOCTYPE html
 <html lang="pt">

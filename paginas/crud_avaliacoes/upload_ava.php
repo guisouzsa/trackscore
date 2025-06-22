@@ -1,5 +1,5 @@
 <?php 
-include_once '../../login/protect.php'; 
+include_once '../assets/protect/protect.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
