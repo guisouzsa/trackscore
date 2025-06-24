@@ -1,5 +1,6 @@
 <?php 
     require_once 'assets/protect/protect.php'; 
+    require_once '../login/conexao.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -64,13 +65,13 @@
                         <img src="assets/foto/ajuda.png" class="icone_botao" alt="Ajuda">
                         Ajuda
                     </a>
-                    <a class="botao_menu" id="button_logout" href="../login/logout.php">
-                        <img src="assets/foto/sair.png" class="icone_botao" alt="Sair">
-                        Sair
-                    </a>
                     <a class="botao_menu" href="#">
                         <img src="assets/foto/politica.png" class="icone_botao" alt="Políticas">
                         Políticas de Privacidade
+                    </a>
+                    <a class="botao_menu" id="button_logout" href="../login/logout.php">
+                        <img src="assets/foto/sair.png" class="icone_botao" alt="Sair">
+                        Sair
                     </a>
                 </div>
             </div>

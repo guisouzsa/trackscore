@@ -11,6 +11,7 @@ body {
 }
 
 
+
 /* CSS DA TELA INICIAL DEPOIS DE LOGIN */
 .tela_inicial {
     background-color: black;
@@ -65,14 +66,14 @@ body {
     background-color: #fbfcfc;
     color: rgb(5, 5, 5);           
     border: none;
-    cursor: pointer;
 }
 
 .divs_principais {
     display: flex;
-    height: 100vh;
     margin: 0px 20px;
     gap: 20px;
+    height: 90vh;
+
 }
 
 .div1 {
@@ -82,8 +83,10 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
+
 }
+
 
 .grupo-cima,
 .grupo-baixo {
@@ -116,6 +119,9 @@ body {
     border: 0.1px solid #ffffff30;
 }
 
+#button_logout {
+    margin-top: 150px;
+}
 
 #button_logout:hover, .botao_menu:hover {
     background-color: rgba(255, 255, 255, 0.2); /* fundo branco bem transparente */
@@ -247,6 +253,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 50px;
+    border-radius: 25px;
 
 }
 
@@ -254,6 +261,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4px;
+
 }
 
 
@@ -751,9 +759,8 @@ button {
 input[type="text"],
 input[type="email"] {
     width: 100%;
-    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-top: 5px;
     box-sizing: border-box;
 }

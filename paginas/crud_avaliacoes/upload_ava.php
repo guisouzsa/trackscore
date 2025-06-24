@@ -31,7 +31,7 @@ include_once '../assets/protect/protect.php';
                                 <input type="text" name="album" placeholder="Ex: Bloom" required>
                                 <label for="nomes" class="nomes">Artista:</label>
                                 <input type="text" name="artista" placeholder="Ex: Troye Sivan" required>
-                                <label for="nomes" class="nomes">comentário:</label>
+                                <label for="nomes" class="nomes">Comentário:</label>
                                 <textarea type="text" name="comentario" id="input_comentario" placeholder="Ex: Muito bom!!!"></textarea>
                             </div>
 
