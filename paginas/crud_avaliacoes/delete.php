@@ -1,7 +1,6 @@
 <?php
     require_once '../../login/conexao.php'; 
 
-
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id_album = $_GET['id']; 
 
