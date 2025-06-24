@@ -669,8 +669,7 @@ button {
 
 .container_dados_user {
     background: linear-gradient(to bottom, #4a7ca5, #0d2c4b);
-    margin: 0;
-    padding: 0;
+
     font-family: Arial, sans-serif;
 }
 
@@ -679,8 +678,8 @@ button {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 25px;
 }
 
 .cartao {
@@ -699,7 +698,6 @@ button {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-
 }
 
 .info {
@@ -744,4 +742,32 @@ button {
 
 .deletar {
     background-color: #dc3545;
+}
+
+
+
+/* UPDATE CSS */
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+form label {
+    color: white;
+    font-weight: bold;
 }

@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' && isset($_GET["id"]) && is_numeric($_
 
     try {
         $stmt = $conexao->prepare("SELECT * FROM avaliacoes WHERE id = :id");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
         $rs = $stmt->fetch(PDO::FETCH_OBJ);

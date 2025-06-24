@@ -7,7 +7,7 @@ $id = $_SESSION['id'];
 
 try {
     $stmt = $conexao->prepare("SELECT * FROM usuarios WHERE id = :id");
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
 
     $user = $stmt->fetch(PDO::FETCH_OBJ);
@@ -27,7 +27,7 @@ try {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cartão de Perfil</title>
+    <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body class="container_dados_user">
@@ -48,18 +48,6 @@ try {
             <a href="delete.php?id=<?php echo $user->id; ?>" class="botao deletar">Deletar</a>
         </div>
     </div>
-
-    <?php if (isset($_GET['erro']) && $_GET['erro'] == 1): ?>
-        <div class="delete-success">
-            <p>Usuário deletado com sucesso!</p>
-        </div>
-    <?php endif; ?>
-
-    <?php if (isset($_GET['erro']) && $_GET['erro'] == 2): ?>
-        <div class="delete-success">
-            <p>ID da avaliação inválido.</p>
-        </div>
-    <?php endif; ?>
 
 </body>
 </html>

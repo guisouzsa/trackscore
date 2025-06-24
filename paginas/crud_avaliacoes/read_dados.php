@@ -26,14 +26,13 @@
     <div class="container_geral">
         <div class="reviews-container">
             <div id="titulo_reviews">
-                <h1>Reviews</h1>
+                <h1>Minhas Avaliações</h1>
             </div>
             <div class="reviews-wrapper">
                 <div class="coluna_reviews">
 
                 <?php
                     try {
-                        // Prepara a consulta para buscar apenas as avaliações do usuário logado
                         $stmt = $conexao->prepare("SELECT * FROM avaliacoes WHERE id_usuario = :id_usuario ORDER BY id DESC");
                         $stmt->bindValue(':id_usuario', $_SESSION['id'], PDO::PARAM_INT);
 
