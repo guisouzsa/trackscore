@@ -9,7 +9,7 @@ if (!isset($_POST['nome'], $_POST['email'], $_POST['senha'])) {
         $email = trim($_POST['email']);
         $senha = trim($_POST['senha']);
 
-if (!$nome || !$email || !$senha) {
+if (empty($nome) || empty($email) || empty($senha)){
     header("Location: cadastro.php?erro_campos=2");
     exit;
 }
