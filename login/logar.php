@@ -1,27 +1,25 @@
 <?php
+    ini_set('session.cookie_httponly', 1);
+    ini_set('session.cookie_samesite', 'Strict');
     session_start();
     require_once 'conexao.php';
 
 if(isset($_POST['email'], $_POST['senha'])) {
-    
     $email = trim($_POST['email']);
     $senha = trim($_POST['senha']);
-
-    if(empty($email)) {
-        header("Location: index.php?email=1");
+    if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: index.php?erro=1");
             exit;
     } else if(empty($senha)) {
-        header("Location: index.php?senha=2");
+        header("Location: index.php?erro=2");
             exit;
     } else {
-    
         $sql = "SELECT * FROM usuarios WHERE email = :email";
         $stmt = $conexao->prepare($sql);
         $stmt->execute([':email' => $email]);
-
         $usuario = $stmt->fetch(PDO::FETCH_OBJ);
-
         if($usuario && password_verify($senha, $usuario->senha)) {
+            session_regenerate_id(true);
             $_SESSION['id'] = $usuario->id;
             $_SESSION['email'] = $usuario->email;
             $_SESSION['nome'] = $usuario->nome;
