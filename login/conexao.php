@@ -11,9 +11,8 @@ try {
     );
     $conexao->exec("set names utf8mb4");
 } catch (PDOException $erro) {
-    echo "Erro na conexão: " . $erro->getMessage();
+    error_log($erro->getMessage());
+    header("Location: erro.php");
     exit;
 }
 ?>
-
-
